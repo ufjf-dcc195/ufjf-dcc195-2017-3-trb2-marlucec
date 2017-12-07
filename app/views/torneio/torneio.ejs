@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trabalho 2</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+   <div class="container-fluid">
+   <header class="row">
+     
+   </header>
+
+   <div class="row">
+       <div role="main">
+        <a href="index.html">Home</a>
+        <h1> Torneio </h1>
+      <form method="POST">
+      <div id="oitavas">
+        <% for(var i in jogos){
+              jogo = jogos[i];%>
+        <p> <%=jogo.e1%>_____________<%=jogo.e2%></p>
+        <%}%>
+
+      </div>
+      <input type="submit">
+    </form>
+       </div>
+   </div>
+   <footer class="row">
+       
+   </footer>
+</div>
+</body>
+</html>

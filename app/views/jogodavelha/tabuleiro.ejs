@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trabalho 2</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+   <div class="container-fluid">
+   <header class="row">
+     
+   </header>
+
+   <div class="row">
+       <div role="main">
+      <a href="index.html">Home</a>
+      <h1>Jogo da Velha</h1>
+      
+      <table align="center">
+        <% for(var i in tabuleiro){
+                linha=tabuleiro[i];%>
+            <tr align="center">
+            <%
+            for(var j in linha){
+                  var casa = linha[j];
+                  var  peca;%>
+                  <td align="center">
+                  <%if(casa=="x"){%>
+                    <div >  <img  src="x.gif"  width="50" height="80" alt="Foto de x"></div>
+
+                  <%}
+                  else if(casa=="o"){%>
+                    <div>  <img  src="o.gif" width="50" height="80" alt="Foto de O"></div>
+                  <%}else{%>
+                    
+                <%}%>
+              </td>
+            <%}%>
+          </tr>
+          <%}%>
+    </table>
+    <p>Preencha os campos abaixos com "x" ou "o" para que esses valores sejam preenchidos na velha acima</p>
+      <form name="myform" action="" method="POST">
+        <%for(var i in tabuleiro){
+            linha=tabuleiro[i];
+            for(var j in linha){
+              var casa = linha[j];%>
+              <input type="text" name="jogo" value="<%=casa%>">
+            <%}%>
+            <br>
+          <%}%>
+      <input type="submit">
+      </form>
+    </div>
+  </body>
+</html>
